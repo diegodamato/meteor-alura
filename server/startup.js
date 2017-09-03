@@ -1,7 +1,9 @@
 Meteor.startup(function(){
 
     Meteor.publish("tarefas", function() {
-        return Tarefas.find({});
+        console.log("Consulta - " + this.userId);
+        console.log({ usuario: this.userId });
+        return Tarefas.find({ usuario: this.userId });
     });
 
 });

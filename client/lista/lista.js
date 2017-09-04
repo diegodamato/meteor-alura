@@ -1,7 +1,6 @@
 Template.lista.helpers({
     
     tarefas: function(){
-        console.log(Tarefas.find({}));
         return Tarefas.find({});
     },
 
